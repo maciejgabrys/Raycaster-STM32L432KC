@@ -1,5 +1,11 @@
 # Raycaster-STM32L432KC
-Real-time raycaster game engine written from scratch for a STM32 L432KC prototype board (80MHz, 64kB SRAM).
+Real-time raycaster game engine written from scratch for a STM32 L432KC prototype board.
+
+
+# Mathematics
+The approach implemented here is my own take on the raycasting. It does not use a traditional 2D array to represent the world (like in Wolfenstein 3D). Instead, the world here is represented in a complex space where each wall is just a pair of points (and an assigned texture). What is great about this approach is that it allows to create more complicated rooms or even move walls (doors) in real-time, although this feature is still waiting to be implemented... 😉
+
+This code was written in C99 to take benefit of the _complex_ floating-point types. It runs on an 80MHz STM32 MCU with only 64kB of SRAM, and it does it quite smoothly.
 
 
 # Parts
